@@ -1,0 +1,29 @@
+$featureColor: darken(#fff, 3%);
+
+@mixin myList {
+  width: 100%;
+
+  ul {
+    list-style: none;
+
+    li {
+      padding: 10px;
+    }
+  }
+}
+
+.employee-table {
+  display: flex;
+  align-items: stretch;
+  margin: 10px auto;
+  border: 1px solid $featureColor;
+
+  .features {
+    background-color: $featureColor;
+    @include myList;
+  }
+
+  .employee {
+    @include myList;
+  }
+}
